@@ -1,7 +1,10 @@
+"""Module providing a function printing python version."""
+import pyttsx3
+
 
 print("hello resan")
 
-print('''Amar shonar Bangla, ami tomay bhalobashi.
+banglaDeshNationalSong = '''Amar shonar Bangla, ami tomay bhalobashi.
 𝄆 Cirodin tomar akash, 𝄇
 Tomar batash, amar prane
 O ma, amar prane bajay bãshi.
@@ -20,5 +23,20 @@ Mori hay, hay re:
 Ma, tor mukher bani amar kane lage shudhar môto,
 Ma, tor bôdonkhani molin hole, ami nôyon
 O ma, ami nôyonjôle bhashi.
-Shonar Bangla, ami tomay bhalobashi.
-      ''')
+Shonar Bangla, ami tomay bhalobashi.''' 
+
+# print(banglaDeshNationalSong)
+
+# text to  speech by using pyttsx3
+
+engine = pyttsx3.init()
+
+# change engine voice rete
+
+rate = engine.getProperty("rate")
+print(rate)
+engine.setProperty("rate" , 400)
+
+engine.say(banglaDeshNationalSong)
+engine.runAndWait()
+engine.stop()
