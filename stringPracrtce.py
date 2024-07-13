@@ -101,3 +101,9 @@ print("hello \r resan") # carriage return
 print("hello \v resan") # vertical tab
 print("hello \f resan") # form feed
 print("hello \x1b resan") # hex escape sequence
+
+# --------------------------------
+# f string practice
+# --------------------------------
+name = input("Enter your name: ")
+print(f"Hello {name}") # f string practice
